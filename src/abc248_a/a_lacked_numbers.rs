@@ -13,3 +13,13 @@
 // S
 // 出力
 // S に登場しない唯一の数字を出力せよ。
+
+use proconio::input;
+
+fn main() {
+    input! {
+        a: i32,
+        b: i32,
+    }
+    println!("{}", a + b);
+}
