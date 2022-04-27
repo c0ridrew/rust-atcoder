@@ -14,14 +14,22 @@
 // 出力
 // S に登場しない唯一の数字を出力せよ。
 
+// https://atcoder.jp/contests/abc248/tasks/abc248_a
+
 use proconio::input;
 
 fn main() {
     input! {
-        a: i32,
-        b: i32,
+        S: String,
     }
-    println!("{}", a + b);
+
+    let sum = 45;
+    let a = S
+        .chars()
+        .fold(0, |acc, c| c.to_digit(10).unwrap_or(0) + acc);
+
+    let result = sum - a;
+    println!("{}", result);
 }
 
 #[cfg(test)]
