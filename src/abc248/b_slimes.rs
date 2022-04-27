@@ -25,9 +25,9 @@ use proconio::input;
 
 fn main() {
     input! {
-        mut a: i32,
-        b: i32,
-        k: i32
+        mut a: usize,
+        b: usize,
+        k: usize
     }
 
     let mut results = 0;

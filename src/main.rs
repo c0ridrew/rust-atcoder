@@ -1,3 +1,3 @@
-mod abc248_a;
+mod abc248;
 
 fn main() {}
