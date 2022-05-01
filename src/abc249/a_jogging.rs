@@ -24,23 +24,32 @@ use proconio::input;
 
 fn main() {
   input! {
-    a: usize,
-    b: usize,
-    c: usize,
-    d: usize,
-    e: usize,
-    f: usize,
-    x: usize,
+    a: f64,
+    b: f64,
+    c: f64,
+
+    d: f64,
+    e: f64,
+    f: f64,
+
+    x: f64,
   }
 
-  let takahashi = b / (a + c) * x;
-  let aoki = e / (d + f) * x;
+  let t_count = (x / (a + c)).floor();
+  let t_rest = x - (a + c) * t_count;
+
+  let a_count = (x / (d + f)).floor();
+  let a_rest = x - (d + f) * a_count;
+
+  let takahashi = b * (t_count * a + t_rest.min(a));
+  let aoki = e * (a_count * d + a_rest.min(d));
+
   let result = if takahashi > aoki {
-    "takahashi"
+    "Takahashi"
   } else if aoki > takahashi {
-    "aoki"
+    "Aoki"
   } else {
-    "draw"
+    "Draw"
   };
 
   println!("{}", result);
