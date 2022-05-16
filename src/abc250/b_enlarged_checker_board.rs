@@ -44,15 +44,20 @@ use proconio::input;
 
 fn main() {
   input! {
-    h: usize,
-    w: usize,
-    r: usize,
-    c: usize,
+    n: i32,
+    a: i32,
+    b: i32,
   }
 
-  let result = h_count + w_count;
+  let white = ".";
+  let black = "#";
 
-  println!("{}", result);
+  let height = n * a;
+  let width = n * b;
+
+  for i in 1..width {
+    println!("{}", i);
+  }
 }
 
 #[cfg(test)]
