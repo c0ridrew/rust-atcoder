@@ -50,7 +50,7 @@ fn main() {
     b: usize,
   }
 
-  let mut stack: Vec<String> = Vec::new();
+  let mut stack = vec![vec![0; n * b]; n * a];
 
   let height = n * a;
   let width = n * b;
