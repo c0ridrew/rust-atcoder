@@ -27,12 +27,6 @@ fn main() {
       S: String,
   }
 
-  let sum = 45;
-  let a = S
-    .chars()
-    .fold(0, |acc, c| c.to_digit(10).unwrap_or(0) + acc);
-
-  let result = sum - a;
   println!("{}", result);
 }
 

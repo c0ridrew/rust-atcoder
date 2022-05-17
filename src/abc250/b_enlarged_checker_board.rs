@@ -40,20 +40,27 @@
 
 // https://atcoder.jp/contests/abc250/tasks/abc250_b
 
+// TODO: solve it later
 use proconio::input;
 
 fn main() {
   input! {
-    n: i32,
-    a: i32,
-    b: i32,
+    n: usize,
+    a: usize,
+    b: usize,
   }
 
-  let white = ".";
-  let black = "#";
+  let mut stack: Vec<String> = Vec::new();
 
   let height = n * a;
   let width = n * b;
+
+  for i in 1..width {
+    stack.push(".".repeat(a));
+    stack.push("#".repeat(n));
+  }
+
+  // let m = a.abs_diff(c) + b.abs_diff()=1
 
   for i in 1..width {
     println!("{}", i);
