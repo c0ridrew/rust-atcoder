@@ -50,21 +50,21 @@ fn main() {
     b: usize,
   }
 
-  let mut stack = vec![vec![0; n * b]; n * a];
+  // let mut stack = vec![vec![0; n * b]; n * a];
 
-  let height = n * a;
-  let width = n * b;
+  // let height = n * a;
+  // let width = n * b;
 
-  for i in 1..width {
-    stack.push(".".repeat(a));
-    stack.push("#".repeat(n));
-  }
+  // for i in 1..width {
+  //   stack.push(".".repeat(a));
+  //   stack.push("#".repeat(n));
+  // }
 
   // let m = a.abs_diff(c) + b.abs_diff()=1
 
-  for i in 1..width {
-    println!("{}", i);
-  }
+  // for i in 1..width {
+  //   println!("{}", i);
+  // }
 }
 
 #[cfg(test)]

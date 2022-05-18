@@ -24,10 +24,13 @@ use proconio::input;
 
 fn main() {
   input! {
-      S: String,
+    s: String,
   }
-
-  println!("{}", result);
+  let mut char_vec: Vec<char> = s.chars().collect();
+  char_vec.pop();
+  char_vec.insert(0, '0');
+  let cs: String = char_vec.iter().collect();
+  println!("{}", cs);
 }
 
 #[cfg(test)]
