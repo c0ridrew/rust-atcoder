@@ -4,5 +4,6 @@ mod abc248;
 mod abc249;
 mod abc250;
 mod abc251;
+mod abc252;
 
 fn main() {}
