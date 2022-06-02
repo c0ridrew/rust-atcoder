@@ -1,21 +1,12 @@
-name: "Test"
+name: "Deploy"
 
 on:
   issue_comment:
-    types: [created]
-
+    types: [created, edited]
 jobs:
-  pr-comment:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: xt0rted/pull-request-comment-branch@v1
-        id: comment-branch
-
-      - uses: actions/checkout@v2
-        if: success()
-        with:
-          ref: ${{ steps.comment-branch.outputs.head_ref }}
-
       - uses: actions/github-script@v3
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
@@ -24,5 +15,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '👋 Thanks for reporting!'
+              body: '👋 Thanks for reporting test3!'
             })
