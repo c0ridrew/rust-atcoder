@@ -21,13 +21,25 @@
 // −6
 //   以下であれば、正解として扱われる。
 
+// https://atcoder.jp/contests/abc242/tasks/abc242_a
+
 use proconio::input;
 
 fn main() {
   input! {
-      a: String,
+      a: f64,
+      b: f64,
+      c: f64,
+      x: f64,
   }
-  println!("{}", a);
+  let result = if x <= a {
+    1.0
+  } else if x <= b {
+    c / (b - a)
+  } else {
+    0.0
+  };
+  println!("{}", result);
 }
 
 #[cfg(test)]
