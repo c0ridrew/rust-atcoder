@@ -16,5 +16,13 @@ jobs:
         with:
           ref: ${{ steps.comment-branch.outputs.head_ref }}
 
-      - run: git rev-parse --abbrev-ref HEAD
-      - run: git rev-parse --verify HEAD
+      - uses: actions/github-script@v3
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '👋 Thanks for reporting!'
+            })
