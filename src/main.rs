@@ -1,3 +1,4 @@
+mod abc239;
 mod abc240;
 mod abc241;
 mod abc242;
@@ -20,7 +21,7 @@ fn main() {}
 // use proconio::input;
 // fn main() {
 //     input! {
-//         a: String,
+//         a: usize,
 //     }
 //     println!("{}", a);
 // }
